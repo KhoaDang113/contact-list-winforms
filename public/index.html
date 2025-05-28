@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danh sách liên hệ</title>
+  </head>
+  <body>
+    <h1>Danh sách liên hệ</h1>
+    <button onclick="showForm()">Thêm liên hệ</button>
+
+    <form
+      id="contactForm"
+      style="display: none"
+      method="POST"
+      action="/contacts"
+    >
+      <input type="text" name="name" placeholder="Tên" required />
+      <input type="text" name="phone" placeholder="Số điện thoại" required />
+      <button type="submit">Lưu</button>
+    </form>
+
+    <script>
+      function showForm() {
+        document.getElementById("contactForm").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
