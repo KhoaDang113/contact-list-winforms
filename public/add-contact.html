@@ -3,13 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <title>Thêm liên hệ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+      }
+      input {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 14px;
+      }
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <h2>Thêm liên hệ</h2>
+
     <form method="POST" action="/contacts">
       <input type="text" name="name" placeholder="Họ tên" required />
       <input type="text" name="phone" placeholder="Số điện thoại" required />
+      <input type="email" name="email" placeholder="Email" required />
       <button type="submit">Lưu</button>
     </form>
+
+    <br />
+    <a href="/">⬅️ Quay về danh sách liên hệ</a>
   </body>
 </html>
